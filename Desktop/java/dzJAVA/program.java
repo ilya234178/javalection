@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
                                             //поиск рандомного числа
 public class program {
     public static void main(String[] args) {
-        int i = ThreadLocalRandom.current().nextInt(-100, 100);
+        int i = ThreadLocalRandom.current().nextInt(-1000, 1000);
         if (i < 0){
             System.out.println("error\n" + i);
 
@@ -39,7 +39,7 @@ public class program {
                 index++;
             }
         }
-        System.out.print(Arrays.toString(m1));
+//        System.out.print(Arrays.toString(m1));
 
         System.out.println("\n");
         System.out.println("==============");
@@ -51,19 +51,19 @@ public class program {
         int n = highBit(i);
         int count = 0;
         for (int j = i; j > Short.MIN_VALUE; j--) {
-            if (j % n == 0) {
+            if (j % n != 0) {
                 count++;
             }
         }
         int[] m2 = new int[count];
         int index = 0;
         for (int j = i; j > Short.MIN_VALUE; j--) {
-            if (j % n == 0) {
+            if (j % n != 0) {
                 m2[index] = j;
                 index++;
             }
         }
-        System.out.print(Arrays.toString(m2));
+//        System.out.print(Arrays.toString(m2));
 
         System.out.println("\n");
         System.out.println("==============");
